@@ -77,15 +77,15 @@ public class PerfilMedico {
         return peso / (Math.pow(altura, 2));
     }
     public int calcularFrecuenciaCardiacaMaxima() {
-        FrecuenciaCardiaca a = new FrecuenciaCardiaca();
+        FrecuenciasCardiacas a = new FrecuenciasCardiacas();
         a.setAnioNacimiento(anioNacimiento);
         a.setMesNacimiento(mesNacimiento);
         a.setDiaNacimiento(diaNacimiento);
         return a.calcularFrecuenciaCardiacaMaxima();
     }
 
-    public int[] calcular frecuenciaCardiacaEsperada() {
-        FrecuenciaCardiaca a = new FrecuenciaCardiaca();
+    public double[] calcularFrecuenciaCardiacaEsperada() {
+        FrecuenciasCardiacas a = new FrecuenciasCardiacas();
         a.setAnioNacimiento(anioNacimiento);
         a.setMesNacimiento(mesNacimiento);
         a.setDiaNacimiento(diaNacimiento);
