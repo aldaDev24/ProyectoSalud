@@ -1,3 +1,9 @@
+/**
+ * Integrantes
+ * - Fiestas Anton Manuel Aldair
+ * - Nima Erazo Nilson Cristobal
+ * - Muñoz Jabo frank
+ */
 import java.time.DateTimeException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
