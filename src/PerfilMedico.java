@@ -83,6 +83,6 @@ public class PerfilMedico {
 
     public double[] calcularFrecuenciaCardiacaEsperada() {
         FrecuenciasCardiacas a = new FrecuenciasCardiacas(nombre, apellido, diaNacimiento, mesNacimiento, anioNacimiento);
-        return a.calcularFrecuenciaCardicaEsperada;
+        return a.calcularFrecuenciaCardiacaEsperada();
     }
 }   
