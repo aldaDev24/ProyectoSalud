@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.Period;
+
 public class FrecuenciasCardiacas {
 
     // Atributos
@@ -31,16 +34,27 @@ public class FrecuenciasCardiacas {
 
     public void setAnioNacimiento(int anioNacimiento){this.anioNacimiento = anioNacimiento;}
 
-    public String getNombre(){return nombre}
+    public String getNombre(){return nombre;}
 
-    public String getApellido(){return apellido}
+    public String getApellido(){return apellido;}
 
-    public int getDiaNacimiento(){return diaNacimiento}
+    public int getDiaNacimiento(){return diaNacimiento;}
 
-    public int getMesNacimiento(){return mesNacimiento}
+    public int getMesNacimiento(){return mesNacimiento;}
 
-    public int getAnioNacimiento(){return anioNacimiento}
+    public int getAnioNacimiento(){return anioNacimiento;}
 
     //Metodos de calculo
+    public int calcularEdad(){
+        LocalDate fechaNacimiento =
+                LocalDate.of(anioNacimiento,mesNacimiento,diaNacimiento);
 
+        if(fechaNacimiento.isAfter(LocalDate.now())){
+            throw new IllegalArgumentException(
+                    "La fecha de nacimiento no puede ser futura"
+            );
+        }
+
+        return Period.between(fechaNacimiento,LocalDate.now()).getYears();
+    }
 }
