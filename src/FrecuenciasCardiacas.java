@@ -57,4 +57,17 @@ public class FrecuenciasCardiacas {
 
         return Period.between(fechaNacimiento,LocalDate.now()).getYears();
     }
+
+    public int calcularFrecuenciaCardiacaMaxima(){
+        return 220 - calcularEdad();
+    }
+
+    public double[] calcularFrecuenciaCardiacaEsperada(){
+        int frecuenciaMaxima = calcularFrecuenciaCardiacaMaxima();
+
+        double minimo = frecuenciaMaxima*0.50;
+        double maximo = frecuenciaMaxima*0.85;
+
+        return new double[]{minimo,maximo};
+    }
 }
