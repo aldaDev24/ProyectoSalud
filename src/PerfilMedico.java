@@ -6,7 +6,7 @@ public class PerfilMedico {
     String sexo;
     byte diaNacimiento;
     byte mesNacimiento;
-    short anioNacimiento
+    short anioNacimiento;
     double altura;
     double peso;
 
@@ -76,7 +76,7 @@ public class PerfilMedico {
     public double calcularIMC() { 
         return peso / (Math.pow(altura, 2));
     }
-    public int calcular frecuenciaCardiacaMaxima() {
+    public int calcularfrecuenciaCardiacaMaxima() {
         FrecuenciaCardiaca a = new FrecuenciaCardiaca();
         a.setAnioNacimiento(anioNacimiento);
         a.setMesNacimiento(mesNacimiento);
