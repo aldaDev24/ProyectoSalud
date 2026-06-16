@@ -19,7 +19,7 @@ public class MainPerfilMedico {
         String sexo = pedirTexto("Ingrese su sexo (M/F): ");
 
         System.out.println("\nFecha de Nacimiento ");
-        int año = pedirEntero("Ingrese su año de nacimiento : ");
+        int anio = pedirEntero("Ingrese su año de nacimiento : ");
         int mes = pedirEntero("Ingrese su mes de nacimiento: ");
         int dia = pedirEntero("Ingrese su día de nacimiento : ");
 
@@ -28,16 +28,16 @@ public class MainPerfilMedico {
         double peso = pedirDecimal("Ingrese su peso en KG : ");
 
         try {
-            LocalDate fechaNacimiento = LocalDate.of(año, mes, dia);
+            LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
 
-            PerfilMedico paciente = new PerfilMedico(nombre, apellido, sexo, fechaNacimiento, altura, peso);
+            PerfilMedico paciente = new PerfilMedico(nombre, apellido, sexo, dia, mes, anio, altura, peso);
 
-            int[] rangoFrecuencia = paciente.calcularFrecuenciaCardiacaEsperada();
+            double[] rangoFrecuencia = paciente.calcularFrecuenciaCardiacaEsperada();
 
             System.out.println(" RESULTADOS MÉDICOS  ");
             System.out.println("Paciente: " + paciente.obtenerNombre() + " " + paciente.obtenerApellido());
             System.out.println("Sexo: " + paciente.obtenerSexo());
-            System.out.println("Fecha de Nacimiento: " + paciente.obtenerFechaNacimiento());
+            System.out.println("Fecha de Nacimiento: " + paciente.obtenerDiaNacimiento() + "/" + paciente.obtenerMesNacimiento() + "/" + paciente.obtenerAnioNacimiento());
             System.out.println();
             System.out.printf("Índice de Masa Corporal (BMI): %.2f\n", paciente.calcularIMC());
             System.out.println("Frecuencia Cardiaca Máxima: " + paciente.calcularFrecuenciaCardiacaMaxima() + " latidos/min");
