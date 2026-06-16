@@ -13,6 +13,11 @@ public class FrecuenciasCardiacas {
                                 int mesNacimiento,
                                 int anioNacimiento) {
 
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.diaNacimiento = diaNacimiento;
+        this.mesNacimiento = mesNacimiento;
+        this.anioNacimiento = anioNacimiento;
     }
 
     // Metodos para Obtener y Establecer
