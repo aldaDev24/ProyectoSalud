@@ -21,6 +21,25 @@ public class FrecuenciasCardiacas {
     }
 
     // Metodos para Obtener y Establecer
+    public void setNombre(String nombre) {this.nombre = nombre;}
+
+    public void setApellido(String apellido) {this.apellido = apellido;}
+
+    public void setDiaNacimiento(int diaNacimiento){this.diaNacimiento = diaNacimiento;}
+
+    public void setMesNacimiento(int mesNacimiento){this.mesNacimiento = mesNacimiento;}
+
+    public void setAnioNacimiento(int anioNacimiento){this.anioNacimiento = anioNacimiento;}
+
+    public String getNombre(){return nombre}
+
+    public String getApellido(){return apellido}
+
+    public int getDiaNacimiento(){return diaNacimiento}
+
+    public int getMesNacimiento(){return mesNacimiento}
+
+    public int getAnioNacimiento(){return anioNacimiento}
 
     //Metodos de calculo
 
