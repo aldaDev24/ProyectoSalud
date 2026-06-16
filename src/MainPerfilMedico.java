@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.time.LocalDate;
@@ -21,7 +19,7 @@ public class MainPerfilMedico {
         String sexo = pedirTexto("Ingrese su sexo (M/F): ");
 
         System.out.println("\nFecha de Nacimiento ");
-        int anio = pedirEntero("Ingrese su año de nacimiento : ");
+        int año = pedirEntero("Ingrese su año de nacimiento : ");
         int mes = pedirEntero("Ingrese su mes de nacimiento: ");
         int dia = pedirEntero("Ingrese su día de nacimiento : ");
 
@@ -30,7 +28,7 @@ public class MainPerfilMedico {
         double peso = pedirDecimal("Ingrese su peso en KG : ");
 
         try {
-            LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
+            LocalDate fechaNacimiento = LocalDate.of(año, mes, dia);
 
             PerfilMedico paciente = new PerfilMedico(nombre, apellido, sexo, fechaNacimiento, altura, peso);
 
