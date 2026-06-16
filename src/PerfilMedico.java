@@ -76,7 +76,7 @@ public class PerfilMedico {
     public double calcularIMC() { 
         return peso / (Math.pow(altura, 2));
     }
-    public int calcularfrecuenciaCardiacaMaxima() {
+    public int calcularFrecuenciaCardiacaMaxima() {
         FrecuenciaCardiaca a = new FrecuenciaCardiaca();
         a.setAnioNacimiento(anioNacimiento);
         a.setMesNacimiento(mesNacimiento);
