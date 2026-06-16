@@ -29,7 +29,15 @@ public class PerfilMedico {
         return peso;
     }
     public double calcularIMC() { 
-        return peso / (altura * altura);
+        return peso / (Math.pow(altura, 2));
+    }
+    public int calcular frecuenciaCardiacaMaxima() {
+        FrecuenciaCardiaca a = new FrecuenciaCardiaca();
+        return a.calcularFrecuenciaCardiacaMaxima(fechaNacimiento);
     }
 
+    public int[] calcular frecuenciaCardiacaEsperada() {
+        FrecuenciaCardiaca a = new FrecuenciaCardiaca();
+        return a.calcularFrecuenciaCardiacaEsperada(fechaNacimiento);
+    }
 }   
