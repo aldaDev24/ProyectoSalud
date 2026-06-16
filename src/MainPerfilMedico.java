@@ -19,9 +19,9 @@ public class MainPerfilMedico {
         String sexo = pedirTexto("Ingrese su sexo (M/F): ");
 
         System.out.println("\nFecha de Nacimiento ");
-        int anio = pedirEntero("Ingrese su año de nacimiento : ");
-        int mes = pedirEntero("Ingrese su mes de nacimiento: ");
-        int dia = pedirEntero("Ingrese su día de nacimiento : ");
+        short anio = pedirEntero("Ingrese su año de nacimiento : ");
+        short mes = pedirEntero("Ingrese su mes de nacimiento: ");
+        short dia = pedirEntero("Ingrese su día de nacimiento : ");
 
         System.out.println("\n Medidas Físicas");
         double altura = pedirDecimal("Ingrese su altura en METROS : ");
@@ -63,13 +63,13 @@ public class MainPerfilMedico {
         return texto;
     }
 
-    private static int pedirEntero(String mensaje) {
-        int numero = 0;
+    private static short pedirEntero(String mensaje) {
+        short numero = 0;
         boolean valido = false;
         while (!valido) {
             System.out.print(mensaje);
             try {
-                numero = scanner.nextInt();
+                numero = scanner.nextShort();
                 valido = true;
             } catch (InputMismatchException e) {
                 System.out.println("Debe ingresar un número entero válido.");

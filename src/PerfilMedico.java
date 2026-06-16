@@ -4,13 +4,13 @@ public class PerfilMedico {
     String nombre;
     String apellido;
     String sexo;
-    byte diaNacimiento;
-    byte mesNacimiento;
+    short diaNacimiento;
+    short mesNacimiento;
     short anioNacimiento;
     double altura;
     double peso;
 
-    public PerfilMedico(String nombre, String apellido, String sexo, byte diaNacimiento, byte mesNacimiento, short anioNacimiento, double altura, double peso) {
+    public PerfilMedico(String nombre, String apellido, String sexo, short diaNacimiento, short mesNacimiento, short anioNacimiento, double altura, double peso) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.sexo = sexo;
@@ -30,10 +30,10 @@ public class PerfilMedico {
     public String obtenerSexo() {
         return sexo;
     }
-    public byte obtenerDiaNacimiento() {
+    public short obtenerDiaNacimiento() {
         return diaNacimiento;
     }
-    public byte obtenerMesNacimiento() {
+    public short obtenerMesNacimiento() {
         return mesNacimiento;
     }
     public short obtenerAnioNacimiento() {
@@ -56,10 +56,10 @@ public class PerfilMedico {
     void establecerSexo(String sexo) {
         this.sexo = sexo;
     }
-    void establecerDiaNacimiento(byte diaNacimiento) {
+    void establecerDiaNacimiento(short diaNacimiento) {
         this.diaNacimiento = diaNacimiento;
     }
-    void establecerMesNacimiento(byte mesNacimiento) {
+    void establecerMesNacimiento(short mesNacimiento) {
         this.mesNacimiento = mesNacimiento;
     }
     void establecerAnioNacimiento(short anioNacimiento) {
